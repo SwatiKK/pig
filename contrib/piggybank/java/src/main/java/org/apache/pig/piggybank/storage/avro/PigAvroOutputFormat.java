@@ -18,6 +18,7 @@
 package org.apache.pig.piggybank.storage.avro;
 
 import static org.apache.avro.file.DataFileConstants.DEFAULT_SYNC_INTERVAL;
+import static org.apache.avro.file.CodecFactory.DEFAULT_DEFLATE_LEVEL;
 import java.io.IOException;
 
 import org.apache.avro.Schema;
@@ -42,9 +43,6 @@ public class PigAvroOutputFormat extends FileOutputFormat<NullWritable, Object> 
 
     /** The configuration key for Avro deflate level. */
     public static final String DEFLATE_LEVEL_KEY = "avro.mapred.deflate.level";
-
-    /** The default deflate level. */
-    public static final int DEFAULT_DEFLATE_LEVEL = 1;
 
     /** The configuration key for the Avro codec. */
     public static final String OUTPUT_CODEC = "avro.output.codec";
